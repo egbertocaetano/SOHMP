@@ -1,0 +1,57 @@
+Entrar na pasta do workspace
+$ cd workspace
+
+Baixar o projeto do repositório para a máquina:
+
+$ git clone <link do projeto>
+
+No Eclipse, criar um projeto com o mesmo nome do projeto baixado. Ele vai detectar que já existe no Workspace e vai incluir (por exemplo, se a pasta que baixou no clone chamar “projeto”, entre no Eclipse, crie um novo projeto com o nome “projeto”)
+
+Entre na pasta do projeto 
+$ cd projeto
+
+Você pode dar um
+
+$ git status 
+
+pra ver se está funcionando. Deve retornar na tela uma lista dos arquivos alterados para commitar.
+
+No Eclipse, faça seus códigos. Para atualizar o repositório, vá ao terminal e dê um “$ git status”. Ele vai exibir os arquivos que precisam ser enviados. Adicione os arquivos que você quiser dar commit.
+
+$ git add /src/projeto/minhaclassenova.java
+
+(para subir todos os arquivos modificados, "$ git add .")
+
+Os arquivos class são locais e não devem ser adicionados. Você criou uma espécie de pacote com as alterações que deseja enviar. 
+
+
+Agora, para dar o commit:
+
+$ git commit -m “Esse é o recado para esse commit”
+
+Alterações commitadas com sucesso, é hora de enviar ao repositório do GitHub
+
+$ git push origin
+
+Usuário e senha do github serão solicitados.
+Fim!
+
+
+Para configurar seu nome e email bonitinho para os commits:
+
+git config --global user.name "Nome Sobrenome"
+git config --global user.email you@example.com
+
+Para restaurar usuário e email padrão:
+git commit --amend --reset-author
+
+
+
+** IMPORTANTE **
+Configurar codificação no projeto antes de upar
+Propriedades do Projeto:
+	Other: UTF-8
+	Delimitador de linha: Unix
+	
+SEMPRE antes de começar a trabalhar no projeto, atualizá-lo:
+$ git pull
